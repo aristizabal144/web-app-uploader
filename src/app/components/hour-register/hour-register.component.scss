@@ -1,0 +1,36 @@
+.demo-table {
+    width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+    font-weight: bold;
+}
+::ng-deep .mat-header-cell {
+    background-color: #C5133E;
+    color: white;
+}
+.table {
+    padding: 30px;
+    &__header {
+        display: flex;
+        background-color: #C5133E;
+        padding: 20px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+::ng-deep .mat-form-field-type-mat-date-range-input .mat-form-field-infix {
+    display: contents;
+    color: white;
+}

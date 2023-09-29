@@ -1,0 +1,22 @@
+<div class="table">
+    
+    <div class="table__table-content">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+            <!-- Position Column -->
+            <ng-container matColumnDef="Fecha">
+                <th mat-header-cell *matHeaderCellDef>Fecha/Hora</th>
+                <td mat-cell *matCellDef="let element">{{element._id.day+' del '+element._id.month+' del '+element._id.year+' | '+element._id.hour+':00'}}</td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="Cantidad">
+                <th mat-header-cell *matHeaderCellDef>Cantidad</th>
+                <td mat-cell *matCellDef="let element">{{element.count}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row (click)="clickedRows.add(row)" [class.demo-row-is-clicked]="clickedRows.has(row)"
+                *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.home-test{
+    &__file{
+        padding: 30px;
+        border: 3px dotted;
+        border-radius: 10px;
+        border-color: #AD0B33 ;
+        margin: 10px 29px 0px 32px;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button{
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__input{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+::ng-deep .p-fileupload-choose{
+    background-color: #AD0B33;
+    border: #c7526f;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 10px 30px;
+}

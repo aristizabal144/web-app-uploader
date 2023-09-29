@@ -1,0 +1,14 @@
+<div class="home-test">
+    <app-sidebar></app-sidebar>
+    <div class="home-test__file">
+        <div class="home-test__input">
+            <input type="text" placeholder="Ingrese el nombre" pInputText [(ngModel)]="name" />
+            <input type="file" name="" id="" (change)="onUpload($event)">
+        </div>
+    </div>
+    <div class="home-test__button">
+        <p-button label="Enviar a procesar" [loading]="loading" styleClass="p-button-outlined p-button-danger" (onClick)="send()"></p-button>
+    </div>
+    <h3>Archivos almacenados</h3>
+    <app-table></app-table>
+</div>
