@@ -14,20 +14,20 @@ export class UploaderService {
     formData.append("file", file, file?.name);
     formData.append("name", name);
     formData.append("bucket", 'uploader-bucket-prod');
-    return this.http.post('http://3.92.176.93:3000/upload', formData);
+    return this.http.post('https://mtwejvyzo5.execute-api.us-east-1.amazonaws.com/prod/v1/upload', formData);
   }
 
   getByDate(start: string , end: string): Observable<any>{
     let params = new HttpParams();
     params = params.append('startDate', start);
     params = params.append('endDate', end.toString());
-    return this.http.get('http://3.92.176.93:3000/upload', { params });
+    return this.http.get('https://mtwejvyzo5.execute-api.us-east-1.amazonaws.com/prod/v1/upload', { params });
   }
 
   getByHour(start: string , end: string): Observable<any>{
     let params = new HttpParams();
     params = params.append('startDate', start);
     params = params.append('endDate', end.toString());
-    return this.http.get('http://3.92.176.93:3000/upload/by-hour', { params });
+    return this.http.get('https://mtwejvyzo5.execute-api.us-east-1.amazonaws.com/prod/v1/upload/by-hour', { params });
   }
 }
